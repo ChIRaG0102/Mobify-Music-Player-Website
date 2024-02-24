@@ -1,0 +1,1512 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&family=Roboto:ital@0;1&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&family=Roboto:ital@0;1&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital@0;1&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kode+Mono:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Smooch&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+.nav{
+    width: 100%;
+    height: 5vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid rgb(59, 57, 57);
+}
+
+.logo img{
+    height: 4.5vw;
+    width: 7vw;
+    /* border: 1px solid white; */
+    border-radius: 50%;
+    margin-left: 1vw;
+    margin-top: 5px;
+    cursor: pointer;
+    animation: dance 8s infinite;
+}
+
+.name h3{
+    /* border: 2px solid white; */
+    color: #adff2f;
+    font-family: "Kode Mono", monospace;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+/* .logo img:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+    transition: 3s ; 
+} */
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+}
+
+.left{
+    width: 50%;
+    height: calc(62.5vw - 15vw);
+    background-color: #080808d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgBox img{
+    position: absolute;
+    width: 100%;
+}
+
+.imgBox{
+    width: 30vw;
+    height: 30vw;
+    /* background-color: aliceblue; */
+    position: relative;
+}
+
+.right{
+    width: 50%;
+    height: calc(62.5vw - 15vw);
+    background-color: #080808d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.songList{
+    width: 40vw;
+    height: 40vw;
+    /* border: 1px solid white; */
+    position: relative;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+    /* width: 5px;
+    border-radius: 15px; */
+    background: transparent;
+} 
+
+::-webkit-scrollbar-thumb{
+    /* background-color: black; */
+   /* border-radius: 15px; */
+    background: transparent;
+}
+
+::-webkit-scrollbar-track{
+    /* background: rgb(59, 57, 57);
+    border-radius: 15px; */
+    background: transparent;
+}
+
+.songs{
+    width: 38vw;
+    height: 10vw;
+    border-bottom: 2px solid rgb(59, 57, 57);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    align-items: center;
+    /* pointer-events: none; */
+}
+
+.songs:hover{
+    background-color: rgba(15, 15, 15, 0.829);
+    cursor: pointer;
+    transition: 0.3s ; 
+}
+
+.songLeft{
+    width: 7vw;
+    height: 7vw;
+    /* border: 1px solid white; */
+    margin-left: 5%;
+    position: relative;
+    pointer-events: none;
+}
+
+.songLeft img{
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+}
+
+.songRight{
+    /* songname and duration  */
+    width: 24vw;
+    height: 7vw;
+    /* border: 1px solid white; */
+    position: relative;
+    margin-right: 5%;
+    color: white;
+    display: flex;
+    pointer-events: none;
+}
+
+.Songname{
+    height: 7vw;
+    width: 17vw;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    pointer-events: none;
+}
+
+.Songname h3,h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vh;
+}
+
+.time{
+    height: 7vw;
+    width:calc(24vw - 17vw);
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time h5{
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    font-size: 2.3vh;
+}
+
+.footer{
+    width: 100%;
+    height: 6.5vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 15vw;
+    height: 3.5vw;
+    /* background: red; */
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.back{
+    /* border: 1px solid white; */
+    background-color: #0f0f0fd8;
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+ 
+.center{
+    /* border: 1px solid white; */
+    background-color: #0f0f0fd8;
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.next{
+    /* border: 1px solid white; */
+    /* background-color: #181717d8; */
+    background-color:#0f0f0fd8;
+    border-radius: 50%;
+    height: 3.5vw;
+    width: 3.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.back:active{
+    transform: scale(120%);
+}
+
+.center:active{
+    transform: scale(120%);
+}
+
+.next:active{
+    transform: scale(120%);
+} 
+
+.back:hover{
+    background-color: #333131d8;
+}
+
+.center:hover{
+    background-color: #333131d8;
+}
+
+.next:hover{
+    background-color: #333131d8;
+}
+
+.footer2{
+    display: flex;
+    justify-content: center;
+    height: 3vw;
+    width: 100%;
+}
+
+.footer2 h2{
+    font-family: "Smooch", cursive;
+    font-size: 1.2rem;
+    font-weight: 450;
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width:375px) and (max-width:389px){
+    ::-webkit-scrollbar{
+        width: 5px; 
+        /* border-radius: 15px;  */
+        background: transparent;
+    } 
+
+    ::-webkit-scrollbar-thumb{
+        /* background-color: black; */
+    /* border-radius: 15px; */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background: rgb(59, 57, 57);
+        border-radius: 15px; */
+        background: transparent;
+    }
+
+    .nav{
+        width: 100%;
+        height: 7vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(59, 57, 57);
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Songname{
+        height: 10vw;
+        width: 35vw;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        pointer-events: none;
+        margin-top: 0;
+        margin-right: 5vw;
+    }
+    
+    .Songname h3,h4{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.2vh;
+    }
+
+    .time h5{
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1.5vh;
+    }
+
+    .footer{
+        width: 100%;
+        height: 13vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container{
+        width: 35vw;
+        height: 4vw;
+        /* background: red; */
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin-top: 3vw; */
+    }
+
+    .back{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .center{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next{
+        /* border: 1px solid white; */
+        background-color:#0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+    .footer2{
+        display: flex;
+        justify-content: center;
+        height: 8vw;
+        width: 100%;
+        background-color:black;
+    }
+
+    .footer2 h2{
+        font-family: "Smooch", cursive;
+        font-size: 0.9rem;
+        font-weight: 450;
+        color: white;
+    }
+
+    .left{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songLeft{
+        width: 13vw;
+        height: 7vw;
+        /* border: 1px solid white; */
+        margin-bottom: 5%;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .songList{
+        width: 100vw;
+        height: 55vw;
+        /* border: 1px solid white; */
+        position: relative;
+        /* background-color:aqua; */
+        overflow-y: scroll;
+    }
+
+    .imgBox{
+        width: 45vw;
+        height: 30vw;
+        /* background-color: aliceblue; */
+        margin-bottom: 10vw;
+        position: relative;
+    }
+
+    .songs{
+        width: 70vw;
+        height: 10vw;
+        border-bottom: 2px solid rgb(59, 57, 57);
+        display: flex;
+        /* background-color:red; */
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        align-items: center;
+        margin: auto;
+        /* pointer-events: none; */
+    }
+
+    .songRight{
+        /* songname and duration  */
+        width: 44vw;
+        height: 12vw;
+        /* border: 1px solid white; */
+        position: relative;
+        margin-right: 5%;
+        color: white;
+        display: flex;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width:410px) and (max-width:430px){
+    ::-webkit-scrollbar{
+        width: 5px; 
+        /* border-radius: 15px;  */
+        background: transparent;
+    } 
+
+    ::-webkit-scrollbar-thumb{
+        /* background-color: black; */
+    /* border-radius: 15px; */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background: rgb(59, 57, 57);
+        border-radius: 15px; */
+        background: transparent;
+    }
+
+    .nav{
+        width: 100%;
+        height: 7vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(59, 57, 57);
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Songname{
+        height: 10vw;
+        width: 35vw;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        pointer-events: none;
+        /* margin-top: 1vw; */
+        margin-right: 2vw;
+    }
+    
+    .Songname h3,h4{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.9vh;
+    }
+
+    .time h5{
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1.4vh;
+    }
+
+    .footer{
+        width: 100%;
+        height: 13vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container{
+        width: 35vw;
+        height: 4vw;
+        /* background: red; */
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin-top: 3vw; */
+    }
+
+    .back{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .center{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next{
+        /* border: 1px solid white; */
+        background-color:#0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+    .footer2{
+        display: flex;
+        justify-content: center;
+        height: 8vw;
+        width: 100%;
+        background-color:black;
+    }
+
+    .footer2 h2{
+        font-family: "Smooch", cursive;
+        font-size: 0.9rem;
+        font-weight: 450;
+        color: white;
+    }
+
+    .left{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songLeft{
+        width: 13vw;
+        height: 7vw;
+        /* border: 1px solid white; */
+        margin-bottom: 5%;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .songList{
+        width: 100vw;
+        height: 55vw;
+        /* border: 1px solid white; */
+        position: relative;
+        /* background-color:aqua; */
+        overflow-y: scroll;
+    }
+
+    .imgBox{
+        width: 60vw;
+        height: 30vw;
+        background-color: aliceblue;
+        margin-bottom: 10vw;
+        position: relative;
+    }
+
+    .songs{
+        width: 75vw;
+        height: 10vw;
+        border-bottom: 2px solid rgb(59, 57, 57);
+        display: flex;
+        /* background-color:red; */
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        align-items: center;
+        margin: auto;
+        /* pointer-events: none; */
+    }
+
+    .songRight{
+        /* songname and duration  */
+        width: 44vw;
+        height: 12vw;
+        /* border: 1px solid white; */
+        position: relative;
+        margin-right: 10%;
+        color: white;
+        display: flex;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:374px){
+    ::-webkit-scrollbar{
+        width: 5px; 
+        /* border-radius: 15px;  */
+        background: transparent;
+    } 
+
+    ::-webkit-scrollbar-thumb{
+        /* background-color: black; */
+    /* border-radius: 15px; */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background: rgb(59, 57, 57);
+        border-radius: 15px; */
+        background: transparent;
+    }
+
+    .nav{
+        width: 100%;
+        height: 10vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(59, 57, 57);
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Songname{
+        height: 10vw;
+        width: 35vw;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        pointer-events: none;
+        margin-right: 3vw;
+        /* margin-top: 1vw; */
+    }
+    
+    .Songname h3,h4{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.9vh;
+    }
+
+    .time h5{
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1.5vh;
+    }
+
+    .footer{
+        width: 100%;
+        height: 13vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container{
+        width: 35vw;
+        height: 4vw;
+        /* background: red; */
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin-top: 3vw; */
+    }
+
+    .back{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .center{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next{
+        /* border: 1px solid white; */
+        background-color:#0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+    .footer2{
+        display: flex;
+        justify-content: center;
+        height: 8vw;
+        width: 100%;
+        background-color:black;
+    }
+
+    .footer2 h2{
+        font-family: "Smooch", cursive;
+        font-size: 0.9rem;
+        font-weight: 450;
+        color: white;
+    }
+
+    .left{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songLeft{
+        width: 13vw;
+        height: 7vw;
+        /* border: 1px solid white; */
+        margin-bottom: 5%;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .songList{
+        width: 100vw;
+        height: 55vw;
+        /* border: 1px solid white; */
+        position: relative;
+        /* background-color:aqua; */
+        overflow-y: scroll;
+    }
+
+    .imgBox{
+        width: 45vw;
+        height: 30vw;
+        /* background-color: aliceblue; */
+        margin-bottom: 10vw;
+        position: relative;
+    }
+
+    .songs{
+        width: 70vw;
+        height: 10vw;
+        border-bottom: 2px solid rgb(59, 57, 57);
+        display: flex;
+        /* background-color:red; */
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        align-items: center;
+        margin: auto;
+        /* pointer-events: none; */
+    }
+
+    .songRight{
+        /* songname and duration  */
+        width: 44vw;
+        height: 12vw;
+        /* border: 1px solid white; */
+        position: relative;
+        margin-right: 5%;
+        color: white;
+        display: flex;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width:760px) and (max-width:820px){
+    ::-webkit-scrollbar{
+        width: 5px; 
+        /* border-radius: 15px;  */
+        background: transparent;
+    } 
+
+    ::-webkit-scrollbar-thumb{
+        /* background-color: black; */
+    /* border-radius: 15px; */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background: rgb(59, 57, 57);
+        border-radius: 15px; */
+        background: transparent;
+    }
+
+    .nav{
+        width: 100%;
+        height: 9vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(59, 57, 57);
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Songname{
+        height: 10vw;
+        width: 35vw;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        pointer-events: none;
+        /* margin-top: 1vw; */
+        margin-right: 2vw;
+        margin-left: 3vw;
+    }
+    
+    .Songname h3,h4{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2.7vh;
+    }
+
+    .time h5{
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1.9vh;
+    }
+
+    .footer{
+        width: 100%;
+        height: 15vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10vw;
+    }
+    
+    .container{
+        width: 35vw;
+        height: 4vw;
+        /* background: red; */
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin-top: 3vw; */
+    }
+
+    .back{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .center{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next{
+        /* border: 1px solid white; */
+        background-color:#0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+    .footer2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vw;
+        width: 100%;
+        background-color:black;
+    }
+
+    .footer2 h2{
+        font-family: "Smooch", cursive;
+        font-size: 1.7rem;
+        font-weight: 450;
+        color: white;
+    }
+
+    .left{
+        width: 100%;
+        height:35vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right{
+        width: 100%;
+        height:35vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songLeft{
+        width: 13vw;
+        height: 7vw;
+        /* border: 1px solid white; */
+        margin-bottom: 5%;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .songList{
+        width: 100vw;
+        height: 55vw;
+        /* border: 1px solid white; */
+        position: relative;
+        /* background-color:aqua; */
+        overflow-y: scroll;
+        margin-top: 10vw;
+    }
+
+    .imgBox{
+        width: 40vw;
+        height: 30vw;
+        background-color: aliceblue;
+        margin-bottom: 10vw;
+        position: relative;
+    }
+
+    .songs{
+        width: 65vw;
+        height: 10vw;
+        border-bottom: 2px solid rgb(59, 57, 57);
+        display: flex;
+        /* background-color:red; */
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        align-items: center;
+        margin: auto;
+        /* pointer-events: none; */
+    }
+
+    .songRight{
+        /* songname and duration  */
+        width: 44vw;
+        height: 12vw;
+        /* border: 1px solid white; */
+        position: relative;
+        margin-right: 10%;
+        color: white;
+        display: flex;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width:390px) and (max-width:409px){
+    ::-webkit-scrollbar{
+        width: 5px; 
+        /* border-radius: 15px;  */
+        background: transparent;
+    } 
+
+    ::-webkit-scrollbar-thumb{
+        /* background-color: black; */
+    /* border-radius: 15px; */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background: rgb(59, 57, 57);
+        border-radius: 15px; */
+        background: transparent;
+    }
+
+    .nav{
+        width: 100%;
+        height: 9vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(59, 57, 57);
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Songname{
+        height: 10vw;
+        width: 35vw;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        pointer-events: none;
+        margin-top: 0;
+        margin-right: 5vw;
+    }
+    
+    .Songname h3,h4{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.7vh;
+    }
+
+    .time h5{
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1.4vh;
+    }
+
+    .footer{
+        width: 100%;
+        height: 13vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container{
+        width: 35vw;
+        height: 4vw;
+        /* background: red; */
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin-top: 3vw; */
+    }
+
+    .back{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .center{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next{
+        /* border: 1px solid white; */
+        background-color:#0f0f0fd8;
+        border-radius: 50%;
+        height: 7.5vw;
+        width: 7.5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+    .footer2{
+        display: flex;
+        justify-content: center;
+        height: 8vw;
+        width: 100%;
+        background-color:black;
+    }
+
+    .footer2 h2{
+        font-family: "Smooch", cursive;
+        font-size: 1.2rem;
+        font-weight: 450;
+        color: white;
+    }
+
+    .left{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songLeft{
+        width: 13vw;
+        height: 7vw;
+        /* border: 1px solid white; */
+        margin-bottom: 5%;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .songList{
+        width: 100vw;
+        height: 55vw;
+        /* border: 1px solid white; */
+        position: relative;
+        /* background-color:aqua; */
+        overflow-y: scroll;
+    }
+
+    .imgBox{
+        width: 45vw;
+        height: 30vw;
+        /* background-color: aliceblue; */
+        margin-bottom: 10vw;
+        position: relative;
+    }
+
+    .songs{
+        width: 70vw;
+        height: 10vw;
+        border-bottom: 2px solid rgb(59, 57, 57);
+        display: flex;
+        /* background-color:red; */
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        align-items: center;
+        margin: auto;
+        /* pointer-events: none; */
+    }
+
+    .songRight{
+        /* songname and duration  */
+        width: 44vw;
+        height: 12vw;
+        /* border: 1px solid white; */
+        position: relative;
+        margin-right: 5%;
+        color: white;
+        display: flex;
+        pointer-events: none;
+    }
+}
+
+@media only screen and (min-width:280px) and (max-width:320px){
+    ::-webkit-scrollbar{
+        width: 5px; 
+        /* border-radius: 15px;  */
+        background: transparent;
+    } 
+
+    ::-webkit-scrollbar-thumb{
+        /* background-color: black; */
+    /* border-radius: 15px; */
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-track{
+        /* background: rgb(59, 57, 57);
+        border-radius: 15px; */
+        background: transparent;
+    }
+
+    .nav{
+        width: 100%;
+        height: 9vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid rgb(59, 57, 57);
+    }
+
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .Songname{
+        height: 10vw;
+        width: 35vw;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        pointer-events: none;
+        margin-top: 0;
+        margin-right: 5vw;
+    }
+    
+    .Songname h3,h4{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.6vh;
+    }
+
+    .time h5{
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1.2vh;
+    }
+
+    .footer{
+        width: 100%;
+        height: 13vw;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container{
+        width: 40vw;
+        height: 2vw;
+        /* background: red; */
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* margin-top: 3vw; */
+    }
+
+    .back{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 12vw;
+        width: 12vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .center{
+        /* border: 1px solid white; */
+        background-color: #0f0f0fd8;
+        border-radius: 50%;
+        height: 12vw;
+        width: 12vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .next{
+        /* border: 1px solid white; */
+        background-color:#0f0f0fd8;
+        border-radius: 50%;
+        height: 12vw;
+        width: 12vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .footer2{
+        display: flex;
+        justify-content: center;
+        height: 8vw;
+        width: 100%;
+        background-color:black;
+    }
+
+    .footer2 h2{
+        font-family: "Smooch", cursive;
+        font-size: 0.9rem;
+        font-weight: 450;
+        color: white;
+    }
+
+    .left{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right{
+        width: 100%;
+        height:36vh;
+        background-color: #080808d8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .songLeft{
+        width: 13vw;
+        height: 7vw;
+        /* border: 1px solid white; */
+        margin-bottom: 5%;
+        position: relative;
+        pointer-events: none;
+    }
+
+    .songList{
+        width: 100vw;
+        height: 60vw;
+        /* border: 1px solid white; */
+        position: relative;
+        /* background-color:aqua; */
+        overflow-y: scroll;
+    }
+
+    .imgBox{
+        width: 50vw;
+        height: 30vw;
+        /* background-color: aliceblue; */
+        margin-bottom: 10vw;
+        position: relative;
+    }
+
+    .songs{
+        width: 70vw;
+        height: 10vw;
+        border-bottom: 2px solid rgb(59, 57, 57);
+        display: flex;
+        /* background-color:red; */
+        justify-content: space-between;
+        padding-top: 3%;
+        padding-bottom: 5%;
+        align-items: center;
+        margin: auto;
+        /* pointer-events: none; */
+    }
+
+    .songRight{
+        /* songname and duration  */
+        width: 44vw;
+        height: 12vw;
+        /* border: 1px solid white; */
+        position: relative;
+        margin-right: 5%;
+        color: white;
+        display: flex;
+        pointer-events: none;
+    }
+}
+ 
